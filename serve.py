@@ -44,6 +44,12 @@ class CORSRequestHandler(http.server.SimpleHTTPRequestHandler):
             fallback_img = os.path.join(ROOT, 'configCenter/static/images/1x1.png')
             if os.path.exists(fallback_img):
                 return fallback_img
+
+        # Fallback for any missing json configs
+        if path.endswith('.json') and not os.path.exists(full_path):
+            fallback_json = os.path.join(ROOT, 'configCenter/empty.json')
+            if os.path.exists(fallback_json):
+                return fallback_json
                 
         return full_path
 
