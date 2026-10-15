@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MCHOSE Hub
+Comment=MCHOSE Keyboard & Mouse Driver
+Exec=/home/tri/.local/bin/mchose-hub
+Icon=/home/tri/.local/share/mchose-web/icon.png
+Terminal=false
+Type=Application
+Categories=Settings;HardwareSettings;
+StartupWMClass=127.0.0.1__18989

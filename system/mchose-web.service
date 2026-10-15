@@ -1,0 +1,13 @@
+[Unit]
+Description=MCHOSE Local Web Driver
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/tri/.local/share/mchose-web
+ExecStart=/run/current-system/sw/bin/python3 /home/tri/.local/share/mchose-web/serve.py
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
